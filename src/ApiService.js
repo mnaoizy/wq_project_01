@@ -1,6 +1,6 @@
 import axios from 'axios'
 axios.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
-const API_URL = 'http://3.17.73.209:3000'
+const API_URL = 'http://wuqi.gq:3000'
 
 export class ApiService {
     constructor(){
