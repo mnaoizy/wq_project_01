@@ -3,7 +3,7 @@
 
     <!-- Pre Test Window -->
     <div class="window" v-if="!main">
-      <div style="display: flex; height: 100%; text-align:center; flex-direction: column; justify-content: space-evenly;" v-if="state === 'intro'">
+      <div style="display: flex; height: 100%; text-align:center; flex-direction: column; justify-content: space-around;" v-if="state === 'intro'">
           <h1>中国語標準語声調知覚実験</h1>
           <div>
           <label style="vertical-align:middle;">お名前</label>
@@ -82,7 +82,7 @@
       </div>
       
       <template v-if="state === 'main-ended'  && showContent">
-        <div style="height: 100%; display:flex; justify-content: space-evenly; align-items: center;">
+        <div style="height: 100%; display:flex; justify-content: space-around; align-items: center;">
         <h1 style="display:inline-block">
          すべての実験が終了しました
         </h1>
@@ -399,10 +399,15 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
 }
 
 .window {
   overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+    justify-content: space-around;
+  align-items: center;
   width: 900px;
   height: 500px;
   background-color: rgb(255, 255, 255);
@@ -424,7 +429,7 @@ export default {
     height: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     
   }
@@ -432,12 +437,12 @@ export default {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     height: 100%;
     
     .bottom-control {
       display: flex;
-      justify-content: space-evenly;
+      justify-content: space-around;
       .answer-button {
         font-size: 1.145rem;
         transition: all .2s ease;
@@ -461,7 +466,7 @@ export default {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     box-sizing: border-box;
     padding: 70px 0;
     h2 {
@@ -498,7 +503,7 @@ export default {
     .options {
       display: flex;
       flex-direction: row;
-      justify-content: space-evenly;
+      justify-content: space-around;
       svg {
         transition: .2s ease;
         &:hover {
